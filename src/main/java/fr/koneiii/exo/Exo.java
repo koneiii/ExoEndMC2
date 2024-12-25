@@ -1,5 +1,6 @@
 package fr.koneiii.exo;
 
+import fr.koneiii.exo.commands.ItemCommand;
 import fr.koneiii.exo.items.ItemsManager;
 import fr.koneiii.exo.listener.ItemsListener;
 import net.milkbowl.vault.economy.Economy;
@@ -21,6 +22,8 @@ public class Exo extends JavaPlugin {
         }
         this.itemsManager = new ItemsManager(this);
         this.getServer().getPluginManager().registerEvents(new ItemsListener(this), this);
+
+        this.getServer().getPluginCommand("item").setExecutor(new ItemCommand(this));
         getLogger().info("Exo enabled");
     }
 

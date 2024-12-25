@@ -78,15 +78,5 @@ public class ItemsListener implements Listener {
         }
     }
 
-    @EventHandler
-    public void onAsyncPlayerChatEvent(AsyncPlayerChatEvent event){
-        if(event.getPlayer() == null) return;
-        if(event.getMessage().equals("debug")){
-            for(AItem item : this.plugin.getItemsManager().getItems().values()){
-                ItemStack itemStack = item.giveItem(event.getPlayer()).toItemStack();
-                event.getPlayer().getInventory().addItem(itemStack);
-            }
-        }
-    }
 
 }

@@ -10,8 +10,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ItemCommand implements CommandExecutor {
 
-    private Exo plugin;
-
+    private final Exo plugin;
 
     public ItemCommand(Exo plugin) {
         this.plugin = plugin;

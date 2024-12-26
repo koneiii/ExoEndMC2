@@ -22,7 +22,6 @@ public class Exo extends JavaPlugin {
         }
         this.itemsManager = new ItemsManager(this);
         this.getServer().getPluginManager().registerEvents(new ItemsListener(this), this);
-
         this.getServer().getPluginCommand("item").setExecutor(new ItemCommand(this));
         getLogger().info("Exo enabled");
     }
@@ -44,7 +43,6 @@ public class Exo extends JavaPlugin {
         if (Bukkit.getPluginManager().getPlugin("Vault") == null) {
             return false;
         }
-
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
         if (rsp == null) {
             return false;

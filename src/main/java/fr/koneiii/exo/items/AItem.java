@@ -32,10 +32,6 @@ public abstract class AItem {
         return material;
     }
 
-    public void onUse(Player player){
-
-    }
-
     public void onLeftClick(PlayerInteractEvent event){
 
     }
@@ -52,9 +48,6 @@ public abstract class AItem {
 
     }
 
-    public void onBlockPlace(Player player){
-
-    }
 
     public ItemBuilder giveItem(Player player){
         return new ItemBuilder(this.material)

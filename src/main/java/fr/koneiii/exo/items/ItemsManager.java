@@ -10,15 +10,12 @@ import java.util.Map;
 
 public class ItemsManager {
 
-    private Exo plugin;
-
     private Map<String, AItem> items;
 
     public ItemsManager(Exo plugin) {
-        this.plugin = plugin;
         this.items = new HashMap<>();
         this.addItem(new KamikazItem());
-        this.addItem(new ThiefHoeItem(this.plugin));
+        this.addItem(new ThiefHoeItem(plugin));
         this.addItem(new HerosSwordItem());
     }
 

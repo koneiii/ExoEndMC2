@@ -7,9 +7,6 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ThiefHoeItem extends AItem {
 
     private Exo exo;

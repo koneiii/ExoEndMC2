@@ -1,7 +1,6 @@
 package fr.koneiii.exo.listener;
 
 import fr.koneiii.exo.Exo;
-import fr.koneiii.exo.items.AItem;
 import fr.koneiii.exo.utils.ItemBuilder;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,13 +8,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemsListener implements Listener {
 
-    private Exo plugin;
+    private final Exo plugin;
 
     public ItemsListener(Exo plugin){
         this.plugin = plugin;

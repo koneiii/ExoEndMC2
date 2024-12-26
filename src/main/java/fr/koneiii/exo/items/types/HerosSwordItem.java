@@ -32,9 +32,9 @@ public class HerosSwordItem extends AItem {
 
     @Override
     public void onAttack(EntityDamageByEntityEvent event) {
-        ItemBuilder itemBuilder = new ItemBuilder(((Player) event.getEntity()).getItemInHand());
-        if(itemBuilder.hasNBTTag("owner") && Objects.equals(itemBuilder.getNBTString("owner"),
-                event.getEntity().getUniqueId().toString()))
+        ItemBuilder itemBuilder = new ItemBuilder(((Player) event.getDamager()).getItemInHand());
+        if(itemBuilder.hasNBTTag("owner") && !Objects.equals(itemBuilder.getNBTString("owner"),
+                event.getDamager().getUniqueId().toString()))
             event.setCancelled(true);
     }
 }

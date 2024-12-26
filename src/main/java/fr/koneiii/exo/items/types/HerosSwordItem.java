@@ -23,6 +23,10 @@ public class HerosSwordItem extends AItem {
                 .equals(event.getPlayer().getUniqueId().toString())) {
             event.getPlayer().sendMessage(itemBuilder.hasNBTTag("owner") ? "§cVous ne pouvez pas utiliser cette épée !" :
                     "§aVous avez lié cette épée à vous !");
+            if(!itemBuilder.getNBTString("owner")
+                    .equals(event.getPlayer().getUniqueId().toString())){
+                event.setCancelled(true);
+            }
             if(!itemBuilder.hasNBTTag("owner")) {
                 itemBuilder.setNBTString("owner", event.getPlayer().getUniqueId().toString());
                 event.getPlayer().setItemInHand(itemBuilder.toItemStack());
